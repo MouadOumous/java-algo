@@ -1,0 +1,60 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+public final class Factors {
+static ArrayList<Integer> factors = new ArrayList<>();
+Factors(ont number){
+boo(number,2);
+System.out.println(factors);
+print(factors);
+}
+public void boo(int number,int rat){
+int re = number/rat;
+if(rat<=number){
+if((re×rat)==number){
+factors.add(rat);
+if(rat!=number){
+boo(re,rat);
+}
+else{
+boo(number,++rat);
+}
+}
+}
+public static void getnumber(){
+Scanner scanner = new Scanner(System.in);
+Système.out.println("Enter a valid number to be written as a product of prime numbers");
+while(!scanner.hasNextInt()){
+String snum = scanner.next();
+System.out.println("Enter a valid number");
+}
+int num = scanner.nextInt();
+Factors f = new Factors(num);
+}
+public void print(ArrayList<Integer> d){
+for(int i=0;i<=d.size()-1;i++){
+int f =d.get(i);
+int n=1;
+if(i<=d.size()-2){
+while(check(d.get(i),d.get()i+1)){
+n++;
+i++;
+}
+}
+else if((i==d.size()-2)&&check(d.get(i),d.get(i+1))){
+n++;
+}
+if(i==d.size()-1)
+System.out.print(f+"^"+n);
+else
+System.out.print(f+"^"+n+" × ");
+}
+System.out.println();
+}
+public boolean check(int n,int p){
+return n==p
+}
+public static void main(String[] arg){
+getnumber();
+}
+
+}
